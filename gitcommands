@@ -1,0 +1,88 @@
+Basic Git Commands:
+
+
+
+Cloning a repository:
+-> git clone (HTTPS LINK)
+
+
+
+Checking changes:
+-> git status
+
+
+
+Update changes and prepares for next commit:
+-> git add --all OR git add -A
+	updates everything
+
+-> git add .
+	updates only the files in the current directory
+
+-> git add *
+	updates only new or modified files, but not deleted files
+
+-> git add *.txt, add *.exe, etc.
+	updates all .txt/.exe etc. files within the current directory
+
+
+
+Commit changes:
+-> git commit -m "..."
+	commits all changes adding "..." within the updated contents
+ 
+-> git reset HEAD~
+	undoes all changes made with the last commit
+
+
+
+Delete files:
+-> git rm "..."
+	removes the named file
+
+-> git rm -f "..."
+	removes named file regardless of committed changes
+
+-> git rm --cached "..."
+	only removes it from staging (keeps the file in local directory)
+
+-> git rm -r "..."
+	-r means recursive, meaning any other folders/contents within the item removed will also be removed
+
+
+
+Viewing commits:
+-> git log
+	shows details regarding last commits
+
+
+
+Branching:
+(Creates a "test" environment that copies the files from your main branch that allows you to test using main files)
+-> git branch 
+	shows all branches
+
+-> git branch "..."
+	creates a new branch
+
+-> git checkout "..."
+	enters the branch specified
+
+-> git merge (branch name) -m "..."
+	merges the current branch with the main branch with the ... text
+
+
+
+
+
+
+
+
+
+
+-> To undo the last change; -> git reset
+-> To undo manually deleted files; -> git reset --hard
+
+
+
+
