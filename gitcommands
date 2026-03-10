@@ -63,26 +63,94 @@ Branching:
 	shows all branches
 
 -> git branch "..."
-	creates a new branch
+	creates a new branch with the name "..."
 
 -> git checkout "..."
-	enters the branch specified
+	enters the specified branch named "..."
 
 -> git merge (branch name) -m "..."
 	merges the current branch with the main branch with the ... text
 
 
 
+Checking previous commits
+-> git log --online
+	Shows all previous commits along with commit ID
+
+-> git checkout "..."
+	Goes back to a previous commit with the commit ID "..."
+
+-> git checkout main
+	Goes back to last commit
+
+-> git diff "..." "..."
+	Shows the differences of both commits
 
 
 
+Local Machine <-> Remote Repository
+
+-> PUSH
+	Sending local changes to the remote repository
+
+-> FETCH
+	Bringing remote changes into your local repository, but not merging yet
+
+-> PULL
+	Fetching and merging, so your working directly immediately reflects remote changes
 
 
+
+-> git push origin "..."
+	Pushes all changes to GitHub's remote repository, only with the specified branch "..."
+
+-> git fetch
+	Fetches new changes from the remote repository, but do not appear in your directory
+
+-> git pull
+	Fetches new changes from the remote repository, and appears within your directory
+
+
+
+Other commands:
+
+-> git restore
+	Undoes all changes until the last commit
+
+-> git restore --staged "..."
+	Undoes all changes made within the staging area, but keeps the working directory unchanged
+
+-> git stash
+	Safely stashes your unfinished work in order to switch branches (works in a FILO stack)
+
+-> git stash pop
+	Safely retains and applies your previously stashed work
+
+-> git stash apply
+	Safely applies your previously stashed work but keeps it in the stack for future use
+
+-> git stash list
+	Shows the stack of all current stashes along with it's specific ID
+
+-> git stash drop
+	Deletes the last stash on the stack
+
+-> git revert
+	Creates a new commit that is the copy of the last commit while git reset deletes all commits previously until that last commit
+
+-> git rebase "..."
+	Moves "..."'s branch to the current branch you are in
+
+
+
+Pull Request
+-> Main idea: "I've made some changes in my branch; please review them, and if everything looks good, merge them into the main branch."
+
+		
 
 
 -> To undo the last change; -> git reset
 -> To undo manually deleted files; -> git reset --hard
-
 
 
 

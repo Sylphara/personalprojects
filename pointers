@@ -1,0 +1,45 @@
+Introduction to pointers in C
+
+Memory (RAM)
+- Each byte of memory has an address
+	- i.e.) 201, next is 202, next is 203, etc.
+- When a variable is declared, when the program is executed there is some amount of memory allocated to the variable
+	- The amount of memory allocated depends on the data type and the compiler
+	- int is 4 bytes, char is 1 byte, float is 4 bytes
+	- i.e.) int a; -> addresses 204-207 is allocated to integer a
+	        char c; -> address 209 is allocated to char c
+		a = 5; a++; -> 5 is placed in addresses 204-207, and is then incremented to 6 still placed in addresses 204-207
+	- Can we know the address of our variable or operate on the memory addresses? -> Pointers
+Pointers
+- Variables that store addresses of another variable
+	- i.e.) Within memory, address 204 stores a = 4. In a seperate place in memory, i.e.) address 64 stores P = 204, which is the address of a. You can later change the syntax so that P equals a different address in memory that stores a different value.
+- To initialize P in this situation, you would do i.e.) int *p; p = &a;
+	- p in this situation would be a pointer pointing to the address of a, which would be a.
+	- To recap, we have the following: two memory addresses, one at 204 storing a = 5, and one at 64 storing P = 204.
+int a;
+int *p;
+p = &a;
+a = 5;
+print p // 204
+print &a // 204
+print &p // 64
+print *p // 5 <-Dereferencing
+*p = 8
+print a // 8
+
+P -> address
+*p -> value at address
+
+Summary:
+- Define a pointer variable by putting an asterisk behind the name
+- Putting an ampersand sign in front of a variable name will return the address
+	- Ampersand sign and default variable will operate with the address
+- Putting an asterisk sign in front of the variable name will operate on the value stored at the address
+
+
+
+
+
+
+Working with Pointers
+
