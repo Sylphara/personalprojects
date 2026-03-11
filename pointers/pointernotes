@@ -43,3 +43,9 @@ Summary:
 
 Working with Pointers
 
+Pointers - variables that store addresses of other variables
+
+int a; //integer
+int *p  //Pointer to integer
+char c; //character
+char *p0 //pointer to character
